@@ -15,21 +15,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
 
-        val helloTextView: TextView = findViewById(R.id.tv_bjit)
-        helloTextView.text = "Hello, debugging"
+//        val helloTextView: TextView = findViewById(R.id.tv_bjit)
+//        helloTextView.text = "Hello, debugging"
 
         setContentView(R.layout.activity_main)
 
 
+       // first() //call nested function
 
-        logIn()
+        //logging()
         division()
 
     }
-    private fun logIn(){
-        Log.e(TAG, "error massage")
-        Log.w(TAG, "warning massage")
-        Log.i(TAG, "info massage")
+    private fun logging(){
+        Log.e(TAG, "Error massage")
+        Log.w(TAG, "Warning massage")
+        Log.i(TAG, "Info massage")
         Log.d(TAG, "Debug massage")
         Log.v(TAG, "Verbose massage")
     }
@@ -43,4 +44,20 @@ class MainActivity : AppCompatActivity() {
             denominator--
         }
     }
+    private fun first(){
+        forth()
+        Log.d(TAG,"1st Function")
+        third()
+    }
+    private fun second(){
+        Log.d(TAG,"2nd Function")
+    }
+    private fun third(){
+        Log.d(TAG,"3rd Function")
+    }
+    private fun forth(){
+        second()
+        Log.d(TAG,"4th Function")
+    }
+
 }
